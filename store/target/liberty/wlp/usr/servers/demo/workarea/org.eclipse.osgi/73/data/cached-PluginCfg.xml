@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for demo generated on 2025.08.17 at 05:09:52 EEST-->
-<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="-535407010" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for demo generated on 2025.08.19 at 03:24:02 EEST-->
+<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="-783813397" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
        
     <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
        
@@ -28,7 +28,7 @@
        
     <ServerCluster CloneSeparatorChange="false" GetDWLMTable="false" IgnoreAffinityRequests="true" LoadBalance="Round Robin" Name="demo_default_node_Cluster" PostBufferSize="0" PostSizeLimit="-1" RemoveSpecialHeaders="true" RetryInterval="60" ServerIOTimeoutRetry="-1">
               
-        <Server CloneID="5efd9c17-f880-4584-839b-4d202d2058e6" ConnectTimeout="5" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_demo" ServerIOTimeout="900" WaitForContinue="false">
+        <Server CloneID="cb3ebbfa-f4b0-457c-b6dc-121f9872c9ea" ConnectTimeout="5" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_demo" ServerIOTimeout="900" WaitForContinue="false">
                      
             <Transport Hostname="localhost" Port="9080" Protocol="http"/>
                      

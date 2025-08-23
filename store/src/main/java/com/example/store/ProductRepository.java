@@ -20,8 +20,8 @@ public class ProductRepository {
                        .findFirst().orElse(null);
     }
 
-    public static void removeProductByName(String name) {
-        products.removeIf(product -> product.getName().equals(name));
+    public static boolean removeProductByName(String name) {
+        return products.removeIf(product -> product.getName().equals(name));
     }
 
     public static void updateProduct(String name, double newPrice) {

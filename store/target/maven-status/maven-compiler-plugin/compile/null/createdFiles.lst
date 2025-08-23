@@ -1,0 +1,4 @@
+com/example/store/Product.class
+com/example/store/ProductApplication.class
+com/example/store/ProductResource.class
+com/example/store/ProductRepository.class

@@ -1,16 +1,13 @@
 package com.example.store;
 
+import java.net.URI;
 import java.util.List;
 
 import javax.ws.rs.BadRequestException;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 
 @Path("/products")
 public class ProductResource {
@@ -24,28 +21,36 @@ public class ProductResource {
 
     @POST
     @Path("/add")
-    public void addProduct(@QueryParam("name") String name, @QueryParam("price") String price) {
+    public Response addProduct(@QueryParam("name") String name, @QueryParam("price") String price) {
         if (name == null || price == null) {
             throw new BadRequestException("Name and price must be provided");
         }
         ProductRepository.addProduct(name, Double.parseDouble(price));
+        URI location = UriBuilder.fromResource(ProductResource.class).path("/list").build();
+        return Response.created(location).build();
     }
 
     @PUT
     @Path("/update")
-    public void updateProduct(@QueryParam("name") String name, @QueryParam("price") String price) {
+    public Response updateProduct(@QueryParam("name") String name, @QueryParam("price") String price) {
         if (name == null || price == null) {
             throw new BadRequestException("Name and price must be provided");
         }
         ProductRepository.updateProduct(name, Double.parseDouble(price));
+        return Response.ok().build();
     }
 
-    @DELETE
     @Path("/DeleteByName")
-    public void deleteProductByName(@QueryParam("name") String name) {
+    public Response deleteProductByName(@QueryParam("name") String name) {
         if (name == null) {
             throw new BadRequestException("Name must be provided");
         }
-        ProductRepository.removeProductByName(name);
+        boolean removed = ProductRepository.removeProductByName(name);
+
+        if (removed) {
+            return Response.ok().build();
+        }else  {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
     }
 }

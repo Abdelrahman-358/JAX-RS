@@ -3,13 +3,13 @@
     <activeBuildProfiles>
         <profileId>liberty</profileId>
     </activeBuildProfiles>
-    <installDirectory>D:\FawryIntern\webApp\store\target\liberty\wlp</installDirectory>
-    <serverDirectory>D:\FawryIntern\webApp\store\target\liberty\wlp\usr\servers\demo</serverDirectory>
-    <userDirectory>D:\FawryIntern\webApp\store\target\liberty\wlp\usr</userDirectory>
-    <serverOutputDirectory>D:\FawryIntern\webApp\store\target\wlp-package\demo</serverOutputDirectory>
+    <installDirectory>/home/alien/web/JAX-RS/store/target/liberty/wlp</installDirectory>
+    <serverDirectory>/home/alien/web/JAX-RS/store/target/liberty/wlp/usr/servers/demo</serverDirectory>
+    <userDirectory>/home/alien/web/JAX-RS/store/target/liberty/wlp/usr</userDirectory>
+    <serverOutputDirectory>/home/alien/web/JAX-RS/store/target/wlp-package/demo</serverOutputDirectory>
     <serverName>demo</serverName>
-    <configDirectory>D:\FawryIntern\webApp\store\src\main\liberty\config</configDirectory>
-    <configFile>D:\FawryIntern\webApp\store\src\main\liberty\config\server.xml</configFile>
+    <configDirectory>/home/alien/web/JAX-RS/store/src/main/liberty/config</configDirectory>
+    <configFile>/home/alien/web/JAX-RS/store/src/main/liberty/config/server.xml</configFile>
     <bootstrapProperties>
         <app.context.root>/</app.context.root>
         <jwt.issuer>https://server.example.com</jwt.issuer>
@@ -26,10 +26,10 @@
         <version>25.0.0.8</version>
         <type>zip</type>
     </assemblyArtifact>
-    <assemblyArchive>D:\cs61b\library-sp21\javalib\io\openliberty\openliberty-kernel\25.0.0.8\openliberty-kernel-25.0.0.8.zip</assemblyArchive>
-    <assemblyInstallDirectory>D:\FawryIntern\webApp\store\target\liberty</assemblyInstallDirectory>
+    <assemblyArchive>/home/alien/.m2/repository/io/openliberty/openliberty-kernel/25.0.0.8/openliberty-kernel-25.0.0.8.zip</assemblyArchive>
+    <assemblyInstallDirectory>/home/alien/web/JAX-RS/store/target/liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
-    <installAppsConfigDropins>D:\FawryIntern\webApp\store\target\liberty\wlp\usr\servers\demo\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <installAppsConfigDropins>/home/alien/web/JAX-RS/store/target/liberty/wlp/usr/servers/demo/configDropins/defaults/install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
     <projectCompileDependency>io.jaegertracing:jaeger-client:1.5.0</projectCompileDependency>
     <projectCompileDependency>io.jaegertracing:jaeger-thrift:1.5.0</projectCompileDependency>
@@ -49,5 +49,5 @@
     <projectCompileDependency>io.opentracing.contrib:opentracing-tracerresolver:0.1.8</projectCompileDependency>
     <projectCompileDependency>org.slf4j:slf4j-api:1.7.30</projectCompileDependency>
     <projectCompileDependency>org.slf4j:slf4j-jdk14:1.7.30</projectCompileDependency>
-    <warSourceDirectory>D:\FawryIntern\webApp\store\src\main\webapp</warSourceDirectory>
+    <warSourceDirectory>/home/alien/web/JAX-RS/store/src/main/webapp</warSourceDirectory>
 </liberty-plugin-config>
